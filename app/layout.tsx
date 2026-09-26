@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import ScrollToTop from "@/components/ScrollToTop";
+import IntroAnimation from "@/components/IntroAnimation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -72,6 +73,9 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 selection:bg-indigo-500/30 selection:text-indigo-600 dark:selection:text-indigo-300 font-sans relative overflow-x-hidden transition-colors duration-300">
         <ThemeProvider>
+          {/* Animated Intro Reveal */}
+          <IntroAnimation />
+
           {/* Ambient subtle glow without grid lines */}
           <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
             <div className="absolute -top-40 -left-40 w-96 h-96 bg-indigo-500/5 dark:bg-indigo-600/10 rounded-full blur-3xl animate-pulse-glow" />
