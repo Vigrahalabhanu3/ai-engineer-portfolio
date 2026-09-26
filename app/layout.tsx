@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,6 +20,24 @@ export const metadata: Metadata = {
   title: "Bhanu Prasad | Full Stack & AI Engineer",
   description:
     "Portfolio of Bhanu Prasad, a Full Stack & AI Engineer building scalable web applications with Next.js, TypeScript, Java, and modern AI integrations.",
+  keywords: [
+    "Bhanu Prasad",
+    "Full Stack Engineer",
+    "AI Engineer",
+    "Next.js Developer",
+    "Java Spring Boot",
+    "TypeScript",
+    "React",
+    "Software Engineer Portfolio",
+  ],
+  authors: [{ name: "Bhanu Prasad" }],
+  openGraph: {
+    title: "Bhanu Prasad | Full Stack & AI Engineer",
+    description:
+      "Explore Bhanu Prasad's portfolio, featured projects in Full Stack Development and Generative AI, and software engineering experience.",
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({
@@ -65,6 +84,7 @@ export default function RootLayout({
             {children}
           </div>
           <Footer />
+          <ScrollToTop />
         </ThemeProvider>
       </body>
     </html>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ResumeModal from "./ResumeModal";
 
 export default function Hero() {
   return (
@@ -34,17 +35,18 @@ export default function Hero() {
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-16 animate-fade-in-up delay-300">
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-16 animate-fade-in-up delay-300">
           <Link
             href="/projects"
-            className="px-7 py-3.5 rounded-xl font-semibold text-sm sm:text-base text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-700 hover:from-indigo-500 hover:via-purple-500 hover:to-indigo-600 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:-translate-y-0.5 transition-all duration-200 group flex items-center gap-2"
+            className="px-7 py-3 rounded-xl font-semibold text-xs sm:text-sm text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-700 hover:from-indigo-500 hover:via-purple-500 hover:to-indigo-600 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:-translate-y-0.5 transition-all duration-200 group flex items-center gap-2"
           >
             <span>Explore Projects</span>
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </Link>
+          <ResumeModal />
           <Link
             href="/contact"
-            className="px-7 py-3.5 rounded-xl font-semibold text-sm sm:text-base text-slate-700 dark:text-slate-200 bg-white/90 dark:bg-slate-900/80 hover:bg-slate-100 dark:hover:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 shadow-md hover:-translate-y-0.5 transition-all duration-200"
+            className="px-6 py-3 rounded-xl font-semibold text-xs sm:text-sm text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 shadow-sm hover:-translate-y-0.5 transition-all duration-200"
           >
             Contact Me
           </Link>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
+import ResumeModal from "@/components/ResumeModal";
 
 export const metadata: Metadata = {
   title: "About Me | Bhanu Prasad",
@@ -110,12 +111,15 @@ export default function AboutPage() {
           <div className="text-center p-8 rounded-2xl bg-gradient-to-r from-indigo-50 dark:from-indigo-950/40 via-purple-50 dark:via-purple-950/30 to-slate-50 dark:to-slate-900/50 border border-indigo-200 dark:border-indigo-500/20 shadow-sm">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Interested in working together?</h3>
             <p className="text-slate-600 dark:text-slate-400 text-sm mb-6">Let&apos;s discuss how I can contribute to your team or project.</p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-sm text-white bg-indigo-600 hover:bg-indigo-500 shadow-md shadow-indigo-600/30 hover:-translate-y-0.5 transition-all"
-            >
-              Get In Touch →
-            </Link>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-sm text-white bg-indigo-600 hover:bg-indigo-500 shadow-md shadow-indigo-600/30 hover:-translate-y-0.5 transition-all"
+              >
+                Get In Touch →
+              </Link>
+              <ResumeModal />
+            </div>
           </div>
         </AnimatedSection>
 
